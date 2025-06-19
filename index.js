@@ -16,17 +16,17 @@ function onMapClick(e){
 map.on("click", onMapClick);
 
 // Camadas WMS reais
-let municipio = L.tileLayer.wms("http://201.75.169.140:8080/geoserver/wms", {
+let municipio = L.tileLayer.wms("http://192.168.0.101:8080/geoserver/wms", {
     layers: "aula:municipio",
     transparent: true,
     format: "image/png",
 });
-let bacia = L.tileLayer.wms("http://201.75.169.140:8080/geoserver/wms", {
+let bacia = L.tileLayer.wms("http://192.168.0.101:8080/geoserver/wms", {
     layers: "aula:bacia",
     transparent: true,
     format: "image/png",
 });
-let uf = L.tileLayer.wms("http://201.75.169.140:8080/geoserver/wms", {
+let uf = L.tileLayer.wms("http://192.168.0.101:8080/geoserver/wms", {
     layers: "aula:uf",
     transparent: true,
     format: "image/png",
@@ -35,9 +35,9 @@ let uf = L.tileLayer.wms("http://201.75.169.140:8080/geoserver/wms", {
 
 // Overlays: Camadas Reais + Download
 let overlayMaps = {
-     '<span>Municípios</span> <a href="http://201.75.169.140:8080/geoserver/aula/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aula:municipio&outputFormat=SHAPE-ZIP" target="_blank" style="text-decoration:none; margin-left:100px; color:#007BFF;">💾</a>': municipio,
-     '<span>Bacias Hidrográficas</span> <a href="http://201.75.169.140:8080/geoserver/aula/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aula:bacia&outputFormat=SHAPE-ZIP" target="_blank" style="text-decoration:none; margin-left:33.5px; color:#007BFF;">💾</a>': bacia,
-     '<span>Unidades Federativas</span> <a href="http://201.75.169.140:8080/geoserver/aula/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aula:uf&outputFormat=SHAPE-ZIP" target="_blank" style="text-decoration:none; margin-left:25px; color:#007BFF;">💾</a>': uf,
+     '<span>Municípios</span> <a href="http://192.168.0.101:8080/geoserver/aula/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aula:municipio&outputFormat=SHAPE-ZIP" target="_blank" style="text-decoration:none; margin-left:100px; color:#007BFF;">💾</a>': municipio,
+     '<span>Bacias Hidrográficas</span> <a href="http://192.168.0.101:8080/geoserver/aula/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aula:bacia&outputFormat=SHAPE-ZIP" target="_blank" style="text-decoration:none; margin-left:33.5px; color:#007BFF;">💾</a>': bacia,
+     '<span>Unidades Federativas</span> <a href="http://192.168.0.101:8080/geoserver/aula/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=aula:uf&outputFormat=SHAPE-ZIP" target="_blank" style="text-decoration:none; margin-left:25px; color:#007BFF;">💾</a>': uf,
     
 };
 
