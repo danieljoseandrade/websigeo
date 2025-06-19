@@ -1,0 +1,101 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+}
+
+/* Header */
+.heading {
+    background: linear-gradient(90deg, #0062ff, #4f46e5, #00c6ff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heading h3 {
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Mapa */
+#map {
+    height: 80vh;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+.footer h3 {
+    color: #00c6ff;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer-content-2 p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* Leaflet Custom */
+.leaflet-control-layers {
+    background-color: #ffffffcc;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-size: 14px;
+}
+
+.leaflet-control-layers label {
+    padding: 4px 8px;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.leaflet-control-layers label:hover {
+    background-color: #f0f0f0;
+}
+
+.leaflet-control-geocoder {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Popup Leaflet */
+.leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Animação leve para a entrada do mapa */
+#map {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .heading h3 {
+        font-size: 18px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}
